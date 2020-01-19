@@ -5,8 +5,7 @@ import { config } from './webpack.common'
 
 const devConfig: webpack.Configuration = merge(config, {
   mode: 'development',
-  devtool: 'inline-source-map',
-  bail: true
+  devtool: 'inline-source-map'
 })
 
 export default devConfig
