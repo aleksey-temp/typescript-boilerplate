@@ -4,7 +4,15 @@
   "description": "Boilerplate for developing NodeJS applications with TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf dist",
+    "start": "node ./dist/app.bundle.js",
+    "webpack:build:dev": "webpack --config webpack.dev.ts",
+    "webpack:build:dev:watch": "webpack --config webpack.dev.ts --watch",
+    "webpack:build:prod": "webpack --config webpack.prod.ts",
+    "build:dev": "run-s clean webpack:build:dev",
+    "build:prod": "run-s clean webpack:build:prod",
+    "serve": "nodemon ./dist/app.bundle.js",
+    "dev": "npm-run-all clean webpack:build:dev --parallel serve webpack:build:dev:watch"
   },
   "keywords": [
     "NodeJS",
@@ -17,7 +25,22 @@
   "author": "Aleksei Kuznetcov",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/node": "^13.1.8",
+    "@types/webpack": "^4.41.2",
+    "@types/webpack-merge": "^4.1.5",
+    "babel-loader": "^8.0.6",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4"
   }
 }
