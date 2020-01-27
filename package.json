@@ -15,12 +15,9 @@
     "dev": "npm-run-all clean webpack:build:dev --parallel serve webpack:build:dev:watch"
   },
   "keywords": [
-    "NodeJS",
-    "JavaScript",
-    "JS",
-    "TypeScript",
-    "TS",
-    "Webpack"
+    "javascript",
+    "typescript",
+    "webpack"
   ],
   "author": "Aleksei Kuznetcov",
   "license": "ISC",

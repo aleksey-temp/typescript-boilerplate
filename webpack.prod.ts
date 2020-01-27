@@ -1,9 +1,9 @@
 import { Configuration } from 'webpack'
 import merge from 'webpack-merge'
 
-import { config } from './webpack.common'
+import { commonConfig } from './webpack.common'
 
-const prodConfig: Configuration = merge(config, {
+const prodConfig: Configuration = merge(commonConfig, {
   mode: 'production',
   bail: true
 })

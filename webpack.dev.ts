@@ -1,9 +1,9 @@
-import webpack from 'webpack'
+import { Configuration } from 'webpack'
 import merge from 'webpack-merge'
 
-import { config } from './webpack.common'
+import { commonConfig } from './webpack.common'
 
-const devConfig: webpack.Configuration = merge(config, {
+const devConfig: Configuration = merge(commonConfig, {
   mode: 'development',
   devtool: 'inline-source-map'
 })

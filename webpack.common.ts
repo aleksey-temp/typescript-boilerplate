@@ -2,7 +2,7 @@ import { resolve } from 'path'
 
 import webpack from 'webpack'
 
-export const config: webpack.Configuration = {
+export const commonConfig: webpack.Configuration = {
   target: 'node',
   entry: {
     app: './src/index.ts'
